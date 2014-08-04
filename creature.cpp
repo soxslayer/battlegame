@@ -1,7 +1,7 @@
 /***********************************************************
  * Author:			   Ian Bender
  * Date Created:     8/1/2014		
- * Last Modified:    8/1/2014	
+ * Last Modified:    8/3/2014	
  * Description:      Assignment 3
  * Filename:		   Creature.cpp	
  *
@@ -16,17 +16,21 @@
 
 namespace Bender
 {
+//default constructor
    Creature::Creature() : attack(0), defense(0), armor(0), strength(0)
    {
+      //default dice to 2 rolls and 6 sides
       attack_rolls = 2;
       defense_rolls = 2;
       attack_sides = 6;
       defense_sides = 6;
    }
 
+//constructor with parameters for armor and strength
    Creature::Creature(int nArmor, int nStrength)
                : attack(0), defense(0), armor(nArmor), strength(nStrength)
    {
+      //default dice to 2 rolls and 6 sides
       attack_rolls = 2;
       defense_rolls = 2;
       attack_sides = 6;
@@ -141,14 +145,3 @@ namespace Bender
       defense_rolls = 3;
    }
 }
-
-
-/***************************************************
- * Entry:   
- *
- * Exit:    
- *
- * Purpose: 
- *************************************************/
-
-

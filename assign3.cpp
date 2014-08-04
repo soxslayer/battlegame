@@ -1,7 +1,7 @@
 /***********************************************************
  * Author:			   Ian Bender
  * Date Created:     8/1/2014		
- * Last Modified:    8/1/2014	
+ * Last Modified:    8/3/2014	
  * Description:      Assignment 3
  * Filename:		   assign3.cpp	
  *
@@ -42,13 +42,13 @@ int main()
    Bender::Creature *p2;
    char play_again;
 
+   //seed random number
    srand(time(0)); 
 
    cout << std::string(30, '\n') 
         << "***ASSIGNMENT 3: FANTASY COMBAT***\n";
    
-   //display menu, get user input
-   do 
+   do //loop until user is done playing
    {
       showMenu();
 
@@ -66,6 +66,8 @@ int main()
    } while (play_again == 'Y' || play_again == 'y');
 
    cout << "Game over.\n";
+   delete p1;
+   delete p2;
    
    return 0;
 }
@@ -197,6 +199,12 @@ void startBattle(Bender::Creature *p1, Bender::Creature *p2)
    return;
 }
 
+/***************************************************
+ * Name:    playerAttack 
+ * Entry:   Parameters for two Creatureobjects. 
+ * Exit:    P2's strength is modified. 
+ * Purpose: P1 attacks P2 and inflicts damage. 
+ *************************************************/
 void playerAttack(Bender::Creature *p1, Bender::Creature *p2)
 {
    int attack;

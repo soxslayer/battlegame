@@ -1,7 +1,7 @@
 /***********************************************************
  * Author:			   Ian Bender
  * Date Created:     8/1/2014		
- * Last Modified:    8/1/2014	
+ * Last Modified:    8/3/2014	
  * Description:      Assignment 3
  * Filename:		   Creature.h
  *
